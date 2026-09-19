@@ -1,0 +1,6 @@
+# 개인과 팀 전용 규칙. 저장소에 올리지 않는다.
+local/
+
+__pycache__/
+*.pyc
+.DS_Store
