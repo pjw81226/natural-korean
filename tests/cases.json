@@ -159,5 +159,12 @@
   {"genre": "general", "text": "설치 방법을 쉽게 풀어냈습니다.", "expect": ["AI 말투"]},
   {"genre": "general", "text": "보고서에 조사 결과를 담아냈습니다.", "expect": ["AI 말투"]},
   {"genre": "general", "text": "직접 써 봤지만 맞지 않았다.", "expect": []},
-  {"genre": "general", "text": "결과를 모아 보고했다.", "expect": []}
+  {"genre": "general", "text": "결과를 모아 보고했다.", "expect": []},
+  {"genre": "report", "text": "얼굴 부분만 잘라 보냈다.", "expect": ["구어"]},
+  {"genre": "report", "text": "공기계로 시험했다.", "expect": ["구어"]},
+  {"genre": "report", "text": "서버 한 대를 분점해서 쓴다.", "expect": ["구어"]},
+  {"genre": "report", "text": "강아지를 찾아 상자를 그린다.", "expect": ["구어"]},
+  {"genre": "report", "text": "공기 질을 측정했다.", "expect": []},
+  {"genre": "report", "text": "지점을 분점으로 운영한다.", "expect": []},
+  {"genre": "general", "text": "얼굴 부분만 잘라 보냈다.", "expect": []}
 ]
