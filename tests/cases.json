@@ -166,5 +166,10 @@
   {"genre": "report", "text": "강아지를 찾아 상자를 그린다.", "expect": ["구어"]},
   {"genre": "report", "text": "공기 질을 측정했다.", "expect": []},
   {"genre": "report", "text": "지점을 분점으로 운영한다.", "expect": []},
-  {"genre": "general", "text": "얼굴 부분만 잘라 보냈다.", "expect": []}
+  {"genre": "general", "text": "얼굴 부분만 잘라 보냈다.", "expect": []},
+  {"genre": "general", "text": "공손함은 어미가 이미 담고 있다.", "expect": []},
+  {"genre": "general", "text": "국을 그릇에 담아 두었다.", "expect": []},
+  {"genre": "general", "text": "\"글이 많다\"는 말을 들으면 구조를 바꾼다.", "expect": []},
+  {"genre": "general", "text": "\"추정합니다\"는 정직한 표기다.", "expect": []},
+  {"genre": "general", "text": "지침이 있으면 이 항목은 끈다.", "expect": []}
 ]
