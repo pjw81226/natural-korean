@@ -1,5 +1,7 @@
 [
-  {"genre": "general", "text": "사용자에 대한 정보를 수집한다.", "expect": ["번역투"]},
+  {"genre": "general", "text": "사용자에 대한 정보를 수집한다.", "expect": []},
+  {"genre": "general", "text": "이 문제에 대해 논의했다.", "expect": ["번역투"]},
+  {"genre": "general", "text": "모든 변경에 대한 정보가 모든 알림 서버로 전달된다.", "expect": []},
   {"genre": "general", "text": "API를 통해 데이터를 가져온다.", "expect": ["번역투"]},
   {"genre": "general", "text": "서버로부터 응답을 받았다.", "expect": ["번역투"]},
   {"genre": "general", "text": "어려움에도 불구하고 일정을 맞췄다.", "expect": ["번역투"]},
