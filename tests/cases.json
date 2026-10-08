@@ -148,5 +148,10 @@
   {"genre": "general", "text": "요청 하나에 담아 보낸다.", "expect": ["직역 구문"]},
   {"genre": "general", "text": "응답에 목록을 담았다.", "expect": ["직역 구문"]},
   {"genre": "general", "text": "담당자가 확인했다.", "expect": []},
-  {"genre": "general", "text": "담보 설정을 해지했다.", "expect": []}
+  {"genre": "general", "text": "담보 설정을 해지했다.", "expect": []},
+  {"genre": "general", "text": "DB를 \"완료\"로 바꾼다.", "expect": ["AI 말투"]},
+  {"genre": "general", "text": "\"바뀜\"으로 응답한다.", "expect": ["AI 말투"]},
+  {"genre": "general", "text": "\"삭제됨\"으로 표시한다.", "expect": ["AI 말투"]},
+  {"genre": "general", "text": "그는 \"내일 보자\"라고 말했다.", "expect": []},
+  {"genre": "general", "text": "`done`으로 바꾼다.", "expect": []}
 ]
