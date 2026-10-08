@@ -153,5 +153,11 @@
   {"genre": "general", "text": "\"바뀜\"으로 응답한다.", "expect": ["AI 말투"]},
   {"genre": "general", "text": "\"삭제됨\"으로 표시한다.", "expect": ["AI 말투"]},
   {"genre": "general", "text": "그는 \"내일 보자\"라고 말했다.", "expect": []},
-  {"genre": "general", "text": "`done`으로 바꾼다.", "expect": []}
+  {"genre": "general", "text": "`done`으로 바꾼다.", "expect": []},
+  {"genre": "general", "text": "관련 자료를 모아보았습니다.", "expect": ["AI 말투"]},
+  {"genre": "general", "text": "문제점을 하나씩 짚어보겠습니다.", "expect": ["AI 말투"]},
+  {"genre": "general", "text": "설치 방법을 쉽게 풀어냈습니다.", "expect": ["AI 말투"]},
+  {"genre": "general", "text": "보고서에 조사 결과를 담아냈습니다.", "expect": ["AI 말투"]},
+  {"genre": "general", "text": "직접 써 봤지만 맞지 않았다.", "expect": []},
+  {"genre": "general", "text": "결과를 모아 보고했다.", "expect": []}
 ]
