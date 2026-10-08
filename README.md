@@ -2,8 +2,7 @@
 
 A Claude Code skill that removes translationese and AI-sounding phrasing from Korean writing.
 
-한국어 글에서 번역투, 영어 직역, AI 말투를 걸러내는 Claude Code 스킬입니다.
-목표는 읽는 사람이 처음부터 한국어로 쓴 글이라고 느끼게 하는 것입니다.
+한국어 글에서 번역투, 영어 직역, AI 말투를 제거하는 Claude Code 스킬입니다.
 
 ## 들어가며
 
