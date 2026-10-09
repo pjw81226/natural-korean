@@ -219,13 +219,14 @@ COLLOQUIAL = [
     (r"공기계|분점(?:하|해|한)|굴신", "은어, 억지 한자어 → 사용하지 않는 단말, 나눠 쓰다, 폈는지 접었는지"),
 ]
 
-# 4-5. 제목 종결. 보고서 제목은 체언으로 끝낸다.
+# 3-5, 4-5. 제목 종결. 모든 장르(ui 제외)의 제목은 체언으로 끝낸다.
 HEADING_BAD_END = re.compile(
     r"(?:했|하|되|이|였|이었|왔|갔|봤|줬|났|졌|쳤|겼|렀|썼|눴|췄|맞|같|아니)?"
     r"(?:나|까|는가|은가|을까|ㄹ까|냐|느냐|니|다|죠|네요|군요)\s*\??$"
 )
 # 체언인데 위 패턴에 걸리는 낱말. 오탐 방지용.
-HEADING_OK_TAIL = ("하나", "가나", "만나", "사우나", "바나나", "안테나", "제나", "하까", "어머니", "주머니", "할머니")
+HEADING_OK_TAIL = ("하나", "가나", "만나", "사우나", "바나나", "안테나", "제나", "하까", "어머니", "주머니", "할머니",
+                   "바다", "구다", "판다", "마다", "온다")
 
 # 5. UI 문구 번역투. ui 모드에서만 본다.
 UI_TRANSLATIONESE = [
@@ -329,7 +330,7 @@ def heading_hits(title: str, genre: str = "report") -> list[tuple[str, str]]:
     if EMOJI_HEAD.match(title):
         found.append(("이모지 머리말", "제목 앞 이모지를 지운다"))
     tail_ok = any(title.endswith(tail) for tail in HEADING_OK_TAIL)
-    if genre == "report" and not tail_ok and HEADING_BAD_END.search(title):
+    if genre != "ui" and not tail_ok and HEADING_BAD_END.search(title):
         found.append(("제목 종결", "체언으로 끝낼 것"))
     return found
 
