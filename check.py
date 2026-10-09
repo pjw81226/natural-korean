@@ -341,8 +341,9 @@ def _blank(m: re.Match) -> str:
 
 
 def strip_tags(text: str) -> str:
-    """HTML은 태그를 걷어낸 뒤 검사한다. 안 그러면 내용이 통째로 skip된다."""
-    text = re.sub(r"(?is)<(script|style)[^>]*>.*?</\1>", _blank, text)
+    """HTML은 태그를 걷어낸 뒤 검사한다. 안 그러면 내용이 통째로 skip된다.
+    script, style, svg 안의 글자는 산문이 아니라서 통째로 뺀다. 그림 라벨이 한 문장으로 이어져 긴 문장으로 잡히던 문제를 막는다."""
+    text = re.sub(r"(?is)<(script|style|svg)[^>]*>.*?</\1>", _blank, text)
     return TAG_RE.sub(_blank, text)
 
 
