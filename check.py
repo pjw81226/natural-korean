@@ -335,10 +335,15 @@ def heading_hits(title: str, genre: str = "report") -> list[tuple[str, str]]:
     return found
 
 
+def _blank(m: re.Match) -> str:
+    """지운 자리에 줄바꿈 수만큼 줄바꿈을 남겨 원문과 줄 번호를 맞춘다."""
+    return " " + "\n" * m.group(0).count("\n")
+
+
 def strip_tags(text: str) -> str:
     """HTML은 태그를 걷어낸 뒤 검사한다. 안 그러면 내용이 통째로 skip된다."""
-    text = re.sub(r"(?is)<(script|style)[^>]*>.*?</\1>", " ", text)
-    return TAG_RE.sub(" ", text)
+    text = re.sub(r"(?is)<(script|style)[^>]*>.*?</\1>", _blank, text)
+    return TAG_RE.sub(_blank, text)
 
 
 HTML_HEADING_RE = re.compile(r"<h([1-4])\b[^>]*>(.*?)</h\1>", re.I)
