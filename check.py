@@ -341,14 +341,22 @@ def strip_tags(text: str) -> str:
     return TAG_RE.sub(" ", text)
 
 
+HTML_HEADING_RE = re.compile(r"<h([1-4])\b[^>]*>(.*?)</h\1>", re.I)
+
+
 def headings(text: str):
-    """마크다운 #과 <h1>~<h3>을 제목으로 뽑는다."""
+    """마크다운 #과 <h1>~<h4>를 제목으로 뽑는다. HTML 제목은 줄 중간에 있어도 잡는다."""
     out = []
     for i, line in enumerate(text.split("\n"), 1):
         m = HEADING_RE.match(line)
         if m:
             title = (m.group(1) or m.group(2) or "").strip()
             title = TAG_RE.sub("", title).strip()
+            if title:
+                out.append((i, title))
+            continue
+        for hm in HTML_HEADING_RE.finditer(line):
+            title = TAG_RE.sub("", hm.group(2)).strip()
             if title:
                 out.append((i, title))
     return out
