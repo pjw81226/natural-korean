@@ -80,6 +80,7 @@
   {"genre": "general", "heading": "클래스 관계 표기", "expect": []},
   {"genre": "general", "heading": "기본 인자의 평가 시점", "expect": []},
   {"genre": "general", "heading": "모바일 앱 바다", "expect": []},
+  {"genre": "general", "heading": "컬렉션 메소드와 람다", "expect": []},
   {"genre": "ui", "heading": "파일을 저장했습니다", "expect": []},
   {"genre": "general", "heading": "✅ 핵심 포인트", "expect": ["이모지 머리말"]},
   {"genre": "ui", "text": "정말로 이 파일을 삭제하시겠습니까?", "expect": ["UI 번역투"]},
